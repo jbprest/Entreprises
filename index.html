@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dossier Solutions Entreprises - JB PREST</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            /* Image de fond avec overlay */
+            background-image: 
+                linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%),
+                url('https://images.pexels.com/photos/5673488/pexels-photo-5673488.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 40px 0;
+        }
+        
+        .brochure {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+            border-radius: 15px;
+
+        }
+        
+       /* Header MODIFIÉ pour le logo et la couleur de fond */
+        .header {
+            /* COULEUR DE FOND UNIE */
+            background: #2c3e50; /* Gris/Bleu foncé */
+            color: white;
+            padding: 40px 40px 30px; 
+            text-align: center;
+            position: relative;
+
+        }
+        
+        /* Style du Logo IMAGE (Nouveau) */
+        .header img {
+            max-width: 250px; /* Taille maximale du logo */
+            height: auto;
+            margin-bottom: 15px; /* Espace sous le logo et au-dessus du slogan */
+        }
+        
+        /* Ancien style du logo texte (supprimé/modifié) */
+        
+        .tagline {
+            font-size: 1.2em; /* Modifié pour correspondre au doc_2.html */
+            opacity: 0.9; /* Ajouté pour correspondre au doc_2.html */
+            font-weight: 300;
+            /* Couleur d'accentuation (Bleu) - Supprimé pour correspondre au doc_2.html */
+            /* text-shadow: 0 0 10px rgba(102, 126, 234, 0.5); - Supprimé pour correspondre au doc_2.html */
+        }
+
+        .intro-box {
+            background: #f8f9fa;
+            padding: 30px 40px;
+            text-align: center;
+            border-bottom: 4px solid #764ba2;
+        }
+        
+        .section {
+            padding: 40px;
+        }
+        
+        .section-title {
+            font-size: 2.2em; /* Modifié pour correspondre au doc_2.html */
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            /* Bleu/Violet */
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .cta-button {
+            /* Bleu/Violet */
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 25px; /* Modifié pour correspondre au doc_2.html */
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+        
+        /* Avantages Côté Client */
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .advantage-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-5px);
+            border-color: #667eea;
+        }
+
+        .advantage-icon {
+            font-size: 2.5em;
+            /* Bleu */
+            color: #667eea;
+            margin-bottom: 15px;
+        }
+
+        .advantage-card h3 {
+            font-size: 1.3em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Services Détaillés */
+        .service-point {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f8f9fa;
+        }
+        
+        .service-point:nth-child(even) {
+            background: #f0f0f5;
+        }
+
+        .service-point-icon {
+            font-size: 1.5em;
+            /* Violet */
+            color: #764ba2;
+            margin-right: 20px;
+            flex-shrink: 0;
+            padding-top: 5px;
+        }
+
+        .service-point h4 {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .info-box {
+            /* Bleu clair/gris */
+            background: #e6f0ff;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .info-box h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            font-size: 0.85em;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+            
+            .section {
+                padding: 30px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8em;
+            }
+            
+            .header img {
+                max-width: 180px;
+            }
+            
+            .tagline {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="brochure">
+        <header class="header">
+            <img src="https://www.jbprest.fr/wp-content/uploads/go-x/u/7a0b51a1-e986-4ed9-998d-b87eb9aa8943/image-342x74.png" alt="Logo JB PREST">
+            <div class="tagline">Votre Partenaire d'Intermédiation en Recrutement et Formation</div>
+        </header>
+
+        <div class="intro-box">
+            <h1 class="section-title" style="margin-bottom: 15px; font-size: 2em; color: #2c3e50;">Votre Solution Recrutement & Formation **GRATUITE**</h1>
+            <p style="font-size: 1.1em; color: #34495e;">
+                Nous sommes votre point de contact pour simplifier la recherche, la comparaison et la sélection des prestataires de formation et de recrutement dont votre entreprise a besoin.
+            </p>
+            <p style="font-size: 1.1em; color: #34495e; font-weight: bold; margin-top: 10px;">
+                Votre entreprise ne paie rien. Nos honoraires sont supportés par nos organismes partenaires.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">Pourquoi Choisir l'Intermédiation JB PREST ?</h2>
+            
+            <div class="advantage-grid">
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">⏱️</div>
+                    <h3>Gain de Temps Massif</h3>
+                    <p style="color: #6c757d;">Fini les heures passées à chercher, comparer et qualifier les prestataires. Nous faisons le travail pour vous.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">💎</div>
+                    <h3>Sélection Qualifiée</h3>
+                    <p style="color: #6c757d;">Nous vous présentons uniquement des organismes qui correspondent précisément à vos critères de budget, de domaine, de qualité etc.</p>
+                </div>
+
+                <div class="advantage-card">
+                    <div class="advantage-icon">✅</div>
+                    <h3>Neutralité Garantie</h3>
+                    <p style="color: #6c757d;">Notre rôle est de vous mettre en relation. Nous ne privilégions aucun partenaire : vous choisissez l'offre la plus pertinente pour vous parmi les différentes propositions.</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center;">
+                <a href="https://www.jbprest.fr/nos-services" class="cta-button">J'ai un besoin, je démarre ici</a>
+            </div>
+        </div>
+
+        <div class="section" style="background: #f0f0f5;">
+            <h2 class="section-title">Notre Processus d'Intermédiation</h2>
+            
+            <div class="service-point">
+                <div class="service-point-icon">1.</div>
+                <div>
+                    <h4>Analyse et Collecte de votre Besoin</h4>
+                    <p style="color: #6c757d;">Nous échangeons avec vous pour définir précisément le périmètre de votre projet (formation spécifique, profil de recrutement, budget, délai etc.)</p>
+                </div>
+            </div>
+
+            <div class="service-point">
+                <div class="service-point-icon">2.</div>
+                <div>
+                    <h4>Recherche et Présélection</h4>
+                    <p style="color: #6c757d;">Nous mobilisons notre réseau d'organismes de recrutement, de formation et indépendants pour identifier les meilleurs Prestataires Partenaires pour votre demande.</p>
+                </div>
+            </div>
+
+            <div class="service-point">
+                <div class="service-point-icon">3.</div>
+                <div>
+                    <h4>Mise en Relation Transparente</h4>
+                    <p style="color: #6c757d;">Nous vous mettons en contact direct avec la sélection de Partenaires sans aucune commission ou coût caché de notre part.</p>
+                </div>
+            </div>
+            
+            <div class="service-point">
+                <div class="service-point-icon">4.</div>
+                <div>
+                    <h4>Couverture de Tous les Dispositifs</h4>
+                    <p style="color: #6c757d;">Notre réseau couvre : Recrutement (CDI, CDD), Intérim, Alternance, Freelancing, Formation professionelle (financée ou non), Coaching, VAE, VAPP.</p>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <p style="font-size: 0.9em; font-style: italic;">
+                    Conformément à nos CGV nous assurons l'intermédiation ; la qualité finale des prestations relève de la responsabilité du Partenaire sélectionné.
+                </p>
+            </div>
+        </div>
+
+        <div class="section" id="demarrer" style="text-align: center;">
+            <h2 class="section-title">Commencez Aujourd'hui</h2>
+            <p>Décrivez-nous votre projet en quelques lignes ou accéder à nos formulaires de besoins via la section "Nos services" sur le site web.</p>
+             <a href="https://www.jbprest.fr/nos-services" class="cta-button">Découvrir tous les services</a>
+        </div>
+        
+        <footer style="background: #2c3e50; color: white; padding: 25px; text-align: center; font-size: 0.85em;">
+            <p>&copy; 2025 JB PREST - Entrepreneur Individuel. SIRET: 93217162200016.</p>
+            <p style="margin-top: 5px;"><a href="https://www.jbprest.fr" style="color: #667eea; text-decoration: none;">www.jbprest.fr</a> |</p>
+        </footer>
+    </div>
+</body>
+</html>
