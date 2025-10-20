@@ -32,35 +32,26 @@
             box-shadow: 0 20px 60px rgba(0,0,0,0.2);
             overflow: hidden;
             border-radius: 15px;
-
         }
         
-       /* Header MODIFIÉ pour le logo et la couleur de fond */
         .header {
-            /* COULEUR DE FOND UNIE */
-            background: #2c3e50; /* Gris/Bleu foncé */
+            background: #2c3e50;
             color: white;
             padding: 40px 40px 30px; 
             text-align: center;
             position: relative;
-
         }
         
-        /* Style du Logo IMAGE (Nouveau) */
         .header img {
-            max-width: 250px; /* Taille maximale du logo */
+            max-width: 250px;
             height: auto;
-            margin-bottom: 15px; /* Espace sous le logo et au-dessus du slogan */
+            margin-bottom: 15px;
         }
-        
-        /* Ancien style du logo texte (supprimé/modifié) */
         
         .tagline {
-            font-size: 1.2em; /* Modifié pour correspondre au doc_2.html */
-            opacity: 0.9; /* Ajouté pour correspondre au doc_2.html */
+            font-size: 1.2em;
+            opacity: 0.9;
             font-weight: 300;
-            /* Couleur d'accentuation (Bleu) - Supprimé pour correspondre au doc_2.html */
-            /* text-shadow: 0 0 10px rgba(102, 126, 234, 0.5); - Supprimé pour correspondre au doc_2.html */
         }
 
         .intro-box {
@@ -75,7 +66,7 @@
         }
         
         .section-title {
-            font-size: 2.2em; /* Modifié pour correspondre au doc_2.html */
+            font-size: 2.2em;
             color: #2c3e50;
             margin-bottom: 30px;
             text-align: center;
@@ -87,14 +78,12 @@
             display: block;
             width: 80px;
             height: 4px;
-            /* Bleu/Violet */
             background: linear-gradient(135deg, #667eea, #764ba2);
             margin: 15px auto 0;
             border-radius: 2px;
         }
 
         .cta-button {
-            /* Bleu/Violet */
             display: inline-block;
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
@@ -102,7 +91,7 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            margin-top: 25px; /* Modifié pour correspondre au doc_2.html */
+            margin-top: 25px;
             transition: all 0.3s ease;
             box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
         }
@@ -137,7 +126,6 @@
 
         .advantage-icon {
             font-size: 2.5em;
-            /* Bleu */
             color: #667eea;
             margin-bottom: 15px;
         }
@@ -164,7 +152,6 @@
 
         .service-point-icon {
             font-size: 1.5em;
-            /* Violet */
             color: #764ba2;
             margin-right: 20px;
             flex-shrink: 0;
@@ -178,7 +165,6 @@
         }
         
         .info-box {
-            /* Bleu clair/gris */
             background: #e6f0ff;
             padding: 25px;
             border-radius: 10px;
@@ -192,13 +178,56 @@
             margin-bottom: 10px;
         }
 
-        /* Footer */
-        .footer {
+        /* Contact Section */
+        .contact-section {
+            background: white;
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+
+        .contact-info-box {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 600px;
+            border: 1px solid #e9ecef;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px 0;
+            font-size: 1.1em;
+        }
+
+        .contact-icon {
+            font-size: 1.8em;
+            margin-right: 15px;
+            color: #667eea;
+        }
+
+        .contact-label {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-right: 10px;
+        }
+
+        .online-info {
+            font-size: 1em;
+            color: #6c757d;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        /* Footer Dark */
+        .footer-dark {
             background: #2c3e50;
             color: white;
-            padding: 25px;
+            padding: 30px 40px;
             text-align: center;
-            font-size: 0.85em;
+            font-size: 1em;
         }
         
         /* Responsive */
@@ -222,6 +251,16 @@
             .tagline {
                 font-size: 1em;
             }
+
+            .contact-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -230,6 +269,7 @@
         <header class="header">
             <img src="https://www.jbprest.fr/wp-content/uploads/go-x/u/7a0b51a1-e986-4ed9-998d-b87eb9aa8943/image-342x74.png" alt="Logo JB PREST">
             <div class="tagline">Votre Partenaire d'Intermédiation en Recrutement et Formation</div>
+            <div class="tagline" style="margin-top: 10px; font-size: 1em;">| Facilitateur & Comparateur |</div>
         </header>
 
         <div class="intro-box">
@@ -238,7 +278,7 @@
                 Nous sommes votre point de contact pour simplifier la recherche, la comparaison et la sélection des prestataires de formation et de recrutement dont votre entreprise a besoin.
             </p>
             <p style="font-size: 1.1em; color: #34495e; font-weight: bold; margin-top: 10px;">
-                Votre entreprise ne paie rien. Nos honoraires sont supportés par nos organismes partenaires.
+                Votre entreprise ne paie rien. Nos honoraires sont supportés par les organismes prestataires.
             </p>
         </div>
 
@@ -256,13 +296,13 @@
                 <div class="advantage-card">
                     <div class="advantage-icon">💎</div>
                     <h3>Sélection Qualifiée</h3>
-                    <p style="color: #6c757d;">Nous vous présentons uniquement des organismes qui correspondent précisément à vos critères de budget, de domaine, de qualité etc.</p>
+                    <p style="color: #6c757d;">Nous vous présentons uniquement 2 ou 3 organismes qui correspondent précisément à vos conditions : clauses et garanties du contrat, modalités de formation, budget et tarifs, profil recherché, délais etc.</p>
                 </div>
 
                 <div class="advantage-card">
                     <div class="advantage-icon">✅</div>
                     <h3>Neutralité Garantie</h3>
-                    <p style="color: #6c757d;">Notre rôle est de vous mettre en relation. Nous ne privilégions aucun partenaire : vous choisissez l'offre la plus pertinente pour vous parmi les différentes propositions.</p>
+                    <p style="color: #6c757d;">Notre rôle est de vous mettre en relation. Nous ne privilégions aucun prestataire : vous choisissez l'offre la plus pertinente pour vous parmi les différentes propositions.</p>
                 </div>
             </div>
             
@@ -277,8 +317,8 @@
             <div class="service-point">
                 <div class="service-point-icon">1.</div>
                 <div>
-                    <h4>Analyse et Collecte de votre Besoin</h4>
-                    <p style="color: #6c757d;">Nous échangeons avec vous pour définir précisément le périmètre de votre projet (formation spécifique, profil de recrutement, budget, délai etc.)</p>
+                    <h4>Collecte de votre besoin</h4>
+                    <p style="color: #6c757d;">Nous échangeons ensemble ou vous transmettez votre demande en ligne pour définir précisément le périmètre de votre projet : clauses et garanties du contrat, modalités de formation, budget et tarifs, profil recherché, délais etc.</p>
                 </div>
             </div>
 
@@ -286,15 +326,16 @@
                 <div class="service-point-icon">2.</div>
                 <div>
                     <h4>Recherche et Présélection</h4>
-                    <p style="color: #6c757d;">Nous mobilisons notre réseau d'organismes de recrutement, de formation et indépendants pour identifier les meilleurs Prestataires Partenaires pour votre demande.</p>
+                    <p style="color: #6c757d;">Nous mobilisons notre réseau d'organismes de recrutement, de formation et indépendants pour identifier les meilleurs prestataires pour votre demande.</p>
                 </div>
             </div>
 
             <div class="service-point">
                 <div class="service-point-icon">3.</div>
                 <div>
-                    <h4>Mise en Relation Transparente</h4>
-                    <p style="color: #6c757d;">Nous vous mettons en contact direct avec la sélection de Partenaires sans aucune commission ou coût caché de notre part.</p>
+                    <h4>Sélection et mise en Relation Transparente</h4>
+                    <p style="color: #6c757d;">Nous vous présentons 2 ou 3 propositions et vous choisissez le prestataire final.<br>
+                    Nous vous mettons en contact uniquement avec votre accord formalisé sans aucune commission ou coût caché de notre part.</p>
                 </div>
             </div>
             
@@ -302,27 +343,58 @@
                 <div class="service-point-icon">4.</div>
                 <div>
                     <h4>Couverture de Tous les Dispositifs</h4>
-                    <p style="color: #6c757d;">Notre réseau couvre : Recrutement (CDI, CDD), Intérim, Alternance, Freelancing, Formation professionelle (financée ou non), Coaching, VAE, VAPP.</p>
+                    <p style="color: #6c757d;">Notre réseau couvre : recrutement CDI, CDD, Intérim, Alternance, Freelancing, Formation professionelle (financée ou non), Coaching, Bilan de compétences, VAE, VAPP.</p>
                 </div>
-            </div>
-            
-            <div class="info-box">
-                <p style="font-size: 0.9em; font-style: italic;">
-                    Conformément à nos CGV nous assurons l'intermédiation ; la qualité finale des prestations relève de la responsabilité du Partenaire sélectionné.
-                </p>
             </div>
         </div>
 
-        <div class="section" id="demarrer" style="text-align: center;">
+        <div class="section contact-section" id="demarrer">
             <h2 class="section-title">Commencez Aujourd'hui</h2>
-            <p>Décrivez-nous votre projet en quelques lignes ou accéder à nos formulaires de besoins via la section "Nos services" sur le site web.</p>
-             <a href="https://www.jbprest.fr/nos-services" class="cta-button">Découvrir tous les services</a>
+            <p style="font-size: 1.1em; color: #6c757d; margin-bottom: 40px;">
+                Décrivez-nous votre projet en quelques lignes ou contactez-nous directement par téléphone
+            </p>
+
+            <!-- Premier carré : Téléphone et Email -->
+            <div class="contact-info-box" style="margin-bottom: 40px;">
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <div>
+                        <span class="contact-label">TÉLÉPHONE</span><br>
+                        06 03 72 12 90
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <div>
+                        <span class="contact-label">EMAIL</span><br>
+                        contact@jbprest.fr
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phrase positionnée dans la section blanche -->
+            <p style="font-size: 1.1em; color: #6c757d; margin: 0 auto 30px auto; text-align: center; line-height: 1.6; max-width: 700px;">
+                Transmettez-nous votre demande précise directement en ligne en vous aidant de nos formulaires de besoins via la section "Nos services" sur le site web
+            </p>
+
+            <!-- Deuxième carré : Site Web uniquement -->
+            <div class="contact-info-box" style="margin-bottom: 40px;">
+                <div class="contact-item">
+                    <span class="contact-icon">🌐</span>
+                    <div>
+                        <span class="contact-label">SITE WEB</span><br>
+                        www.jbprest.fr
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://www.jbprest.fr/nos-services" class="cta-button">Découvrir tous les services</a>
         </div>
         
-        <footer style="background: #2c3e50; color: white; padding: 25px; text-align: center; font-size: 0.85em;">
-            <p>&copy; 2025 JB PREST - Entrepreneur Individuel. SIRET: 93217162200016.</p>
-            <p style="margin-top: 5px;"><a href="https://www.jbprest.fr" style="color: #667eea; text-decoration: none;">www.jbprest.fr</a> |</p>
-        </footer>
+        <div class="footer-dark">
+            © 2025 JB PREST
+        </div>
     </div>
 </body>
 </html>
